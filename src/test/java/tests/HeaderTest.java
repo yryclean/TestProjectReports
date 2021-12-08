@@ -14,44 +14,42 @@ import static base.Groups.SMOKE;
 
 @Listeners({ScreenshotListener.class})
 public class HeaderTest extends TestBase {
-    @Test(groups = SMOKE, priority = 0, description = "Click on Online Courses link")
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("Click on link and verify correct page is opened")
-    public void onlineCoursesLinkTest() {
-
-        HeaderPage.clickOnlineCourseLink();
-
-        Assert.assertEquals(VirtualClassPage.getPageTitle(), "Виртуальные классы");
-    }
-
-    @Test(groups = SMOKE, priority = 1, description = "Click on Day Time Courses link")
-    @Severity(SeverityLevel.BLOCKER)
-    @Description("Click on link, move cursor and verify correct page is opened")
-    public void DayTimeCoursesTest() {
-
-        HeaderPage.goToDayTimeCourses();
-
-        Assert.assertEquals(DayTimeCoursePage.getPageTitle(), "Дневные онлайн курсы в Академии BELHARD в Минске");
-
-    }
-
-    @Test(groups = SMOKE, priority = 2)
-    public void ManageAndBATest() {
-
-        HeaderPage.goToManageAndBA();
-
-        Assert.assertEquals(ManageBaPage.getPageTitle(), "Онлайн курсы управление и бизнес-анализ в сфере разработки ПО в Минске");
-    }
-
-    @Test(groups = SMOKE)
-    public void ItBusinessEscortTest() {
-
-        HeaderPage.goToItBusinessEscort();
-
-        Assert.assertEquals(ITBusinessEscortPage.getPageTitle(), "Онлайн курсы сопровождение it бизнеса в Минске");
-
-    }
-}
+//    @Test(groups = SMOKE, priority = 0, description = "Click on Online Courses link")
+//    @Severity(SeverityLevel.CRITICAL)
+//    @Description("Click on link and verify correct page is opened")
+//    public void onlineCoursesLinkTest() {
+//
+//        HeaderPage.clickOnlineCourseLink();
+//        Assert.assertEquals(VirtualClassPage.getPageTitle(), "Виртуальные классы");
+//    }
+//
+//    @Test(groups = SMOKE, priority = 1, description = "Click on Day Time Courses link")
+//    @Severity(SeverityLevel.BLOCKER)
+//    @Description("Move cursor, click on the link and verify correct page is opened")
+//    public void DayTimeCoursesTest()  {
+//
+//        HeaderPage.goToDayTimeCourses();
+//        Assert.assertEquals(DayTimeCoursePage.getPageTitle(), "Дневные онлайн курсы в Академии BELHARD в Минске");
+//
+//    }
+//
+//    @Test(groups = SMOKE, priority = 2)
+//    @Severity(SeverityLevel.BLOCKER)
+//    @Description("Move cursor, click on the link and verify correct page is opened")
+//    public void ManageAndBATest() {
+//
+//        HeaderPage.goToManageAndBA();
+//        Assert.assertEquals(ManageBaPage.getPageTitle(), "Онлайн курсы управление и бизнес-анализ в сфере разработки ПО в Минске");
+//    }
+//
+//    @Test(groups = SMOKE)
+//    public void ItBusinessEscortTest() {
+//
+//        HeaderPage.goToItBusinessEscort();
+//        Assert.assertEquals(ITBusinessEscortPage.getPageTitle(), "Онлайн курсы сопровождение it бизнеса в Минске");
+//
+//    }
+//}
 //
 //    @Test(groups = SMOKE)
 //    public void DevelopmentCourseTest() {
@@ -133,39 +131,43 @@ public class HeaderTest extends TestBase {
 //        Assert.assertEquals(KidsCoursePage.getPageTitle(), "Онлайн курсы программирования для детей от 7 до 15 лет в Минске");
 //
 //    }
+
+    @Test(groups = SMOKE)
+    public void AllDirectionsTrainingTest() throws InterruptedException {
+
+        HeaderPage.goTotTraining4AllDirections();
+        Thread.sleep(2000);
+        Assert.assertEquals(AllDirectionsTrainingPage.getPageTitle(), "Стажировка в Академии BELHARD");
+
+    }
+
+    @Test(groups = SMOKE)
+    public void TrainingBATest() throws InterruptedException {
+
+        HeaderPage.goToTraining4BA();
+        Thread.sleep(2000);
+        Assert.assertEquals(TrainingBAPage.getPageTitle(), "Стажировка для бизнес-аналитиков в сфере разработки ПО");
+
+    }
+
+    @Test(groups = SMOKE)
+    public void TrainingHR() throws InterruptedException {
+
+        HeaderPage.goToTrainingHR();
+        Thread.sleep(2000);
+        Assert.assertEquals(TrainingHRPage.getPageTitle(), "Стажировка для IT-рекрутеров в Академии BELHARD");
+
+    }
+
+    @Test(groups = SMOKE)
+    public void EmploymentTest() throws InterruptedException {
+
+        HeaderPage.clickEmploymentLink();
+        Thread.sleep(2000);
+        Assert.assertEquals(EmploymentPage.getPageTitle(), "Трудоустройство Академии BELHARD");
+    }
+}
 //
-//    @Test(groups = SMOKE)
-//    public void AllDirectionsTrainingTest() {
-//
-//        HeaderPage.goTotTraining4AllDirections();
-//
-//        Assert.assertEquals(AllDirectionsTrainingPage.getPageTitle(), "Стажировка в Академии BELHARD");
-//
-//    }
-//    @Test(groups = SMOKE)
-//    public void TrainingBATest() {
-//
-//        HeaderPage.goToTraining4BA();
-//
-//        Assert.assertEquals(TrainingBAPage.getPageTitle(), "Стажировка для бизнес-аналитиков в сфере разработки ПО");
-//
-//    }
-//    @Test(groups = SMOKE)
-//    public void TrainingHR() {
-//
-//        HeaderPage.goToTrainingHR();
-//
-//        Assert.assertEquals(TrainingHRPage.getPageTitle(), "Стажировка для IT-рекрутеров в Академии BELHARD");
-//
-//    }
-//    @Test(groups = SMOKE)
-//    public void EmploymentTest() {
-//
-//        HeaderPage.clickEmploymentLink();
-//
-//        Assert.assertEquals(EmploymentPage.getPageTitle(), "Трудоустройство Академии BELHARD");
-//
-//    }
 //    @Test(groups = SMOKE)
 //    public void CorporateLearningTest() {
 //
