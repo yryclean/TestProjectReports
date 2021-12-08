@@ -1,5 +1,6 @@
 package base;
 
+import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
@@ -9,8 +10,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.net.MalformedURLException;
 
-import static com.codeborne.selenide.Browsers.CHROME;
-import static com.codeborne.selenide.Browsers.FIREFOX;
+import static com.codeborne.selenide.Browsers.*;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
@@ -24,7 +24,6 @@ public class TestBase {
 
     protected static void browserSetup() {
         String browserName = System.getProperty("browser", CHROME);
-        Configuration.remote = "http://localhost:4444";
         Configuration.browser = browserName;
         open(baseUrl);
 
