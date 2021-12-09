@@ -20,6 +20,9 @@ public class TestBase {
             Configuration.browser = FIREFOX;
         } else if (browser.equalsIgnoreCase("safari")) {
             Configuration.browser = SAFARI;
+        } else if (browser.equalsIgnoreCase("edge")) {
+            Configuration.browser = EDGE;
+
         }
         open(baseUrl);
     }
