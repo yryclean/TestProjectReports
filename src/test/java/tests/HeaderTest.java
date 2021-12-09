@@ -136,7 +136,7 @@ public class HeaderTest extends TestBase {
     public void AllDirectionsTrainingTest() throws InterruptedException {
 
         HeaderPage.goTotTraining4AllDirections();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(AllDirectionsTrainingPage.getPageTitle(), "Стажировка в Академии BELHARD");
 
     }
@@ -145,7 +145,7 @@ public class HeaderTest extends TestBase {
     public void TrainingBATest() throws InterruptedException {
 
         HeaderPage.goToTraining4BA();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(TrainingBAPage.getPageTitle(), "Стажировка для бизнес-аналитиков в сфере разработки ПО");
 
     }
@@ -154,7 +154,7 @@ public class HeaderTest extends TestBase {
     public void TrainingHR() throws InterruptedException {
 
         HeaderPage.goToTrainingHR();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(TrainingHRPage.getPageTitle(), "Стажировка для IT-рекрутеров в Академии BELHARD");
 
     }
@@ -163,7 +163,7 @@ public class HeaderTest extends TestBase {
     public void EmploymentTest() throws InterruptedException {
 
         HeaderPage.clickEmploymentLink();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(EmploymentPage.getPageTitle(), "Трудоустройство Академии BELHARD");
     }
 }
