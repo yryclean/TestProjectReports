@@ -12,7 +12,7 @@ public class TestBase {
 
     private static String baseUrl = "https://belhard.academy/";
     @BeforeMethod
-    public void browserSetup() throws InterruptedException {
+    public void browserSetup() {
         String browser = java.lang.System.getProperties().getProperty("browser");
         if (browser.equalsIgnoreCase("chrome")) {
             Configuration.browser = CHROME;
@@ -28,7 +28,7 @@ public class TestBase {
     }
 
     @AfterMethod
-    public void closeTab() throws InterruptedException {
+    public void closeTab() {
         Selenide.closeWebDriver();
     }
 }
